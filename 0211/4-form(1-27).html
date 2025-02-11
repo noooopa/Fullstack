@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>form(1-27)</title>
 </head>
 <body>
     <h1>label 요소</h1>
@@ -11,12 +11,13 @@
         <table border="1">
             <caption>회원가입 입력</caption>
             <colgroup>
-                <col>
-                <col>
+                <col width="200">
+                <col width="500">
             </colgroup>
             <tbody>
                 <tr>
                     <th scope="row"><label for="id">아이디</label></th>
+                    <!-- scope는 스크린리더가 읽을 수 있게 만들어줌 -->
                     <td><input type="text" id="id" title="아이디 입력"></td>
                     <!-- label은 웹 접근성을 향상시켜 글자를 클릭해도 입력창이 활성화 되게 만들 수 있음 -->
                     <!-- label 태그의 텍스트를 클릭하면 연결된 사용자 입력 요소로 포커스가 이동되게 만듦 -->
