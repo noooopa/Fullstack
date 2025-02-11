@@ -8,13 +8,14 @@
 <body>
     <form action="" method="post">
         <fieldset>
-            <legend>필수입력 확인</legend>
+            <legend>필드에 입력형식 힌트주기</legend>
             <p><label for="id">아이디</label>
-            <input type="text" id="id" placeholder="아이디 입력" required="required"></p>
+            <input type="text" id="id" placeholder="아이디 입력" required="required" autocomplete="off"></p>
+            <!-- autocomplete="off" 를 사용하면 자동완성 기능을 off하게 됨, 반대의 경우 on을 사용 -->
             <p><label for="pw">비밀번호</label>
             <input type="text" id="pd" placeholder="비밀번호 입력" required="required"></p>
             <p><input type="submit" value="확인"></p>
-            <!-- required="required" 태그는 필수입력 확인 태그로 입력하지 않은 창을 체크하여 알려 줌 -->
+            
         </fieldset>
     </form>
 </body>
