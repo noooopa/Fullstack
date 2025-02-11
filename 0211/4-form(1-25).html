@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form(1-25)</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <legend>type 속성</legend>
+        <p>아이디 : <input type="text"></p>
+        <p>비밀번호 : <input type="password"></p>
+        <p>검색 : <input type="search"></p>
+        <p>이메일 : <input type="email"></p>
+        <p>전화번호 : <input type="tel"></p>
+        <p>컬러선택 : <input type="color"></p>
+        <p>수량 : <input type="number" min="1" max="10" value="1"></p>
+        <!-- number은 눌러서 숫자를 올리는 선택창 -->
+        <p>수량 : <input type="range" min="1" max="10" value="1"></p>
+        <!-- range는 바 형태의 선택 창 -->
+        <p>예 <input type="radio" name="receive" checked="checked">
+        아니오 <input type="radio" name="receive" ></p>
+        <!-- radio는 이지 선다 형태의 체크창 -->
+        <!-- 권고사항은 checked="checked"로 사용하며, -->
+        <!-- checked의 위치에 따라 시작 위치가 달라짐 -->
+        <p>html <input type="checkbox" checked="checked">
+        css <input type="checkbox"></p>
+        <!-- checkbox는 중복으로 선택 가능한 체크창 -->
+        <p><input type="submit" value="전송"></p>
+        <!-- submit 는 작성한 내용을 전송하게 만들어 줌 -->
+        <p><input type="reset" value="취소"></p>
+        <!-- reset는 작성한 내용을 지워줌 -->
+        <p><input type="button" value="확인"></p>
+        <!-- button은 자바스크립트를 이용하여 어떻게 작동할지 지정해줘야 함 -->
+        <p><input type="image" src="images/bt.png" alt="전송"></p>
+        <!-- image는 이미지를 사용하여 버튼을 만들떄 사용 -->
+        <p><input type="file"></p>
+        <!-- file은 파일 탐색기 기능을 사용하게 해줌 -->
+    </form>
+</body>
+</html>

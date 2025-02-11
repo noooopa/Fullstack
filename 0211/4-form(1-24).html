@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form(1-24)</title>
+    <style>
+    /* 상속 개념은 상위에 태그를 지정해주면 아래로 미지정 된 사항은 위에 지정된것을 따름 */
+    /* 개별적 class로 별도지정 가능 */    
+    fieldset{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    legend{text-align: center;}
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <!-- merhod는 전송방식, action 전송될 링크 -->
+        <!-- get 방식은 검색 등 공개된 정보 
+        POST는 중요한 정보를 보낼떄 사용함  -->
+    <fieldset>
+        <!-- fieldset은 form을 감싸는 태두리를 표시 -->
+        <legend>Login</legend>
+        <!-- legend 테두리 안에 글자 -->
+        <P>ID : <input type="text"></P>
+        <P>PW : <input type="password"></P>
+    </fieldset>
+    </form>
+</body>
+</html>
