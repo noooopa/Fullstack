@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form(1-26)</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>회원가입</legend>
+            <p>가입목적 : <br/> <textarea rows="5" cols="100"></textarea></p>
+            <!-- rows는 눈에 보이는 자리만 말함 5로 설정해도 그 이상 작성가능 -->
+            <!-- cols 는 글자수를 지정해줌 -->
+            <p>전화번호 : 
+                <select>
+                    <option>지역번호</option>
+                    <option selected="selected">02</option>
+                    <option>031</option>
+                    <option>044</option>
+                    <!-- select 박스에서 선택할 내용들을 입력 가능함 -->
+                    <!-- selected="selected"로 시작부분 설정 -->
+                </select>
+                <input type="text">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>

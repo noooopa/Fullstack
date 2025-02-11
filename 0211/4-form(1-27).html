@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>label 요소</h1>
+    <form action="#" method="post">
+        <table border="1">
+            <caption>회원가입 입력</caption>
+            <colgroup>
+                <col>
+                <col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row"><label for="id">아이디</label></th>
+                    <td><input type="text" id="id" title="아이디 입력"></td>
+                    <!-- label은 웹 접근성을 향상시켜 글자를 클릭해도 입력창이 활성화 되게 만들 수 있음 -->
+                    <!-- label 태그의 텍스트를 클릭하면 연결된 사용자 입력 요소로 포커스가 이동되게 만듦 -->
+                </tr>
+                <tr>
+                    <th scope="row"><label for="pw">비밀번호</label></th>
+                    <td><input type="password" id="pw" title="비밀번호 입력"></td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="r_pw">비밀번호 재입력</label></th>
+                    <td><input type="password" id="r_pw" title="비밀번호 재입력"></td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="email">이메일</label></th>
+                    <td><input type="text" id="email" title="이메일아이디 입력">@
+                    <input type="text" title="이메일주소입력"></td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="hp">핸드폰 번호</label></th>
+                    <td>
+                        <select  id="hp">
+                            <option >선택</option>
+                            <option >010</option>
+                            <option >011</option>
+                        </select>-
+                        <input type="text" title="휴대폰 번호 중간 4자리">
+                        <input type="text" title="휴대폰 번호 끝 4자리">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div><input type="submit" value="회원가입"><input type="reset" value="취소"></div>
+    </form>
+</body>
+</html>
