@@ -4,18 +4,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{margin: 0; padding: 0;}
-        .container{
-            width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }header{
-            height: 200px;
-            background-color: tan;
-    </style>
+<style>
+*{margin: 0;padding: 0;}
+.container{
+    width:1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header{
+    height: 200px;
+    background-color: rgb(105, 105, 105);
+}
+.logo{
+    width: 200px;
+    height:150px;
+    background-color: rgb(160, 160, 160);
+    float: left;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+nav{
+    width:800px;
+    height:80px;
+    background-color: rgb(160, 160, 160);
+    float: left;
+    margin-top: 90px;
+    margin-left: 70px;
+}
+nav ul{
+    list-style: none;
+    width: 600px;
+    height:50px;
+    background-color: rgb(224, 224, 224);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+nav ul li{float: left;}
+
+nav ul li a{
+    color: #333;
+    text-decoration: none;
+    display: block;
+    width:100px;
+    height:30px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 10px;
+    margin-right: 20px;    
+
+}
+
+section{
+    margin-top: 10px;
+    height: 500px;
+    background-color: rgb(105, 105, 105);
+}
+section .left_box{
+    height:450px;
+    width:750px;
+    background-color: rgb(160, 160, 160);
+    float:left;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+
+.left1{
+    height: 450 px;
+    width: 350px;
+    background-color: tan;
+    float: left;
+}
+
+
+.right1{
+    height: 450 px;
+    width: 350px;
+    background-color: tan;
+    floatr: right;
+}
+
+
+section .right_box{
+    margin-right: 20px;
+    height:450px;
+    width:350px;
+    background-color: rgb(160, 160, 160);
+    float: right;
+}
+
+.top1{
+    height: 200px;
+    width: 350px;
+    background-color: rgb(224, 224, 224)
+}
+.bottom1{
+    margin-top: 50px;
+    height: 200px;
+    width: 350px;
+    background-color: rgb(224, 224, 224)
+}
+
+footer{
+    margin-top: 10px;
+    height: 100px;
+    background-color: rgb(105, 105, 105);
+    padding-top: 10px;
+}
+.footer_t{
+    width: 550;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgb(160, 160, 160);
+    margin-left: 150;
+}
+.footer_b{
+    width: 550;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgb(160, 160, 160);
+    margin-top: 10px;
+    margin-left: 150;
+}
+
+</style>
 </head>
 <body>
-    
+<div class="container"> 
+    <header>
+        <h1 class="logo"><a href="#">Logo</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#">Menu1</a></li>
+                <li><a href="#">Menu2</a></li>
+                <li><a href="#">Menu3</a></li>
+                <li><a href="#">Menu4</a></li>
+                <li><a href="#">Menu5</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <article class="left_box">
+            <div class="left1"></div>
+            <div class="right1"></div>
+        </article>
+        
+        <article class="right_box">
+            <div class="top1">위</div>
+            <div class="bottom1">아래</div>
+
+        </article>
+    </section>
+    <footer>
+        <div class="fotter_t">
+            경기도 부천시 오정구 삼정동 032-674-5685 icoxpub@naver.com
+        </div>
+        <div class="fotter_b">
+            COPYRIGHTⓒ
+        </div>
+    </footer>
+</div>       
 </body>
 </html>
