@@ -7,10 +7,11 @@
     <style>
         *{margin: 0; padding: 0; }
         ul{list-style: none;}
-        /* .one >li{float: left;} */
-        .one li{float: left;}
+        /* .one >li{float: left;} 자식 선택자 */
+        /* .one li{float: left;} 하위 선택자자 */
         /* >(꺽쇠)를 사용하면 자식만 선택하여 나열 됨,
         사용하지 않으면 하위에 있는 모든걸 선택하는 하위선택자가 됨 */
+        .one > li{border: 1px solid #333;}
     </style>
 </head>
 <body>
