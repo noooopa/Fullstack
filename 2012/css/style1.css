@@ -1,0 +1,18 @@
+h1{background-color: red;}
+p{color: blue;}
+.gr{color: green;}
+/* p와 .gr은 겹치지만 class선택자가 우선이므로 .gr태그가 적용됨 */
+#pink1{background-color: pink;}
+/* class와 id선택자의 사용법과 작동법은 동일하지만, id는 앞에 #을 붙임
+id 선택자는 body안에서 단 한개만 설정가능, 중복이 가능하긴 하지만 오류가 생김
+id선택자가 먼저 개발되고 class선택자는 이후에 개발됨 */
+.btxt{color: red;}
+.cxtx{color: blueviolet;}
+.atxt{font-weight: bold;}
+#b1{background-color: brown;}
+.a1{background-color: hotpink !important;}
+/* 선택자 우선순위
+1. !miportant (도저히 찾기 힘들떄)
+2. id선택자
+3. class선택자
+4. 일반 선택자(type선택자) */

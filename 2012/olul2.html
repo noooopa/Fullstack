@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2단메뉴</title>
+    <style>
+        *{margin: 0; padding: 0; }
+        ul{list-style: none;}
+        /* .one >li{float: left;} */
+        .one li{float: left;}
+        /* >(꺽쇠)를 사용하면 자식만 선택하여 나열 됨,
+        사용하지 않으면 하위에 있는 모든걸 선택하는 하위선택자가 됨 */
+    </style>
+</head>
+<body>
+    <ul class="one">
+        <li><a href="#">메뉴1</a>
+        <ul>
+            <li><a href="#">메뉴1-1</a></li>
+            <li><a href="#">메뉴1-2</a></li>
+            <li><a href="#">메뉴1-3</a></li>
+        </ul>
+        </li>
+        <li><a href="#">메뉴2</a>
+            <ul>
+                <li><a href="#">메뉴2-1</a></li>
+                <li><a href="#">메뉴2-2</a></li>
+                <li><a href="#">메뉴2-3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">메뉴3</a>
+            <ul>
+                <li><a href="#">메뉴3-1</a></li>
+                <li><a href="#">메뉴3-2</a></li>
+                <li><a href="#">메뉴3-3</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
