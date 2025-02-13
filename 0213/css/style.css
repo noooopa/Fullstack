@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1000px;
+    height: 800px;
+    margin: 0 auto;
+}
+header{
+    width: 200px;
+    height: 800px;
+    background-color: #FFB6C1;
+    float: left;
+}
+header h1{
+    margin: 30px;
+    width: 150px;
+}
+header h1 img{
+    width: 100%;
+}
+header ul{
+    list-style: none;
+    width: 180px;
+    border: 1px solid #333;
+    margin: 0 auto;
+}
+header ul li{
+    display: block;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;    
+    color: #333;
+    text-decoration: none;
+}
+header ul li a:hover{
+    background-color: #919191;
+    color: aliceblue;
+}
+section{
+    width: 800px;
+    height: 800px;
+    background-color: rgb(165, 165, 165);
+    float: left;
+}
+section .img_slider{
+    width: 800px;
+    height: 400px;
+    background-color: #ff8772;
+}
+section .content{
+    width: 800px;
+    height: 300px;
+    background-color: beige;
+}
+.content div{
+    width: 33.33%;
+    height: 300px;
+    float: left;
+}
+.content .notice{
+    background-color: #585858;
+}
+.content .banner{
+    background-color: #919191;
+}
+.content .icons{
+    background-color: #a1a1a1;
+}
+footer{
+    width: 800px;
+    height: 100px;
+    background-color: #F08080;
+}
+.f_logo{
+    width: 200px;
+    height: 100px;
+    float: left;
+    background-color: rgb(199, 199, 199);
+}
+.f_menu{
+    width: 600px;
+    height: 50px;
+    float: left;
+    background-color: rgb(150, 150, 150);
+}
+.f_copy{
+    width: 600px;
+    height: 50px;
+    float: left;
+    background-color: rgb(100, 100, 100);
+}

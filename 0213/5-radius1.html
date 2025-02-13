@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radius1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            width: 800px;
+            height: 70px;
+            background-color: antiquewhite;
+            margin: 0 auto;
+            padding-top: 10px;
+        }
+        nav>ul{
+            width: 600px;
+            height: 50px;
+            background-color: darkorange;
+            margin: 0 auto;
+        }
+        nav ul li{
+            list-style: none;
+            float: left;
+            margin-left: 25px;
+        }
+        nav ul li:nth-child(1) a{
+            /* 첫째라는 뜻으로 <li><a href="#">회사소개</a></li>를 가르킴 */
+            border-radius: 25px
+            /* border-radius 양쪽 다 라운드 처리 */
+        }
+        nav ul li:nth-child(2) a{
+            border-top-left-radius: 25px
+            /* border-top-left-radius 좌측 상단만 라운드 처리 */
+        }
+        nav ul li:nth-child(3) a{
+            border-bottom-right-radius: 25px
+            /* border-bottom-right-radius 우측 하단만 라운드 처리 */
+        }
+        nav ul li a{
+            display: block;
+            width: 120px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+            background-color: rgb(168, 84, 5);            
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">제품소개</a></li>
+            <li><a href="#">커뮤니티</a></li>
+            <li><a href="#">다운로드</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

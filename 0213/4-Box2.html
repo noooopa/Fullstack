@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box2</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        /* margin: 0 auto; left, right가 auto인 상태 */
+        .box1{
+            background-color: #FF1493;
+        }
+        .box2{
+            background-color: hotpink;
+        }
+        .box3{
+            background-color: #FFB6C1;
+        }
+        .box4{
+            
+            background-color: #FFE4E1;
+            transition: all 0.5s;            
+        }
+        .box4:hover{
+            background-color: rgba(252, 0, 0, 0.432);
+        }
+        .box5{
+            background-color: #000000;
+            float: right;
+            margin-right: 100px;
+            /* -(마이너스)로도 사용가능, 평소엔 사용하지 않음
+            박스가 숨겨졌다가 나오는 상황엔 활용 가능 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+    <div class="box box5">박스5</div>
+</body>
+</html>
