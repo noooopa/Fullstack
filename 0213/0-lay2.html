@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout2</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 모든 요소의 기본 마진과 패딩을 제거 */
+        .container{
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* class요소에만 .으로 시작함 */
+        header{
+            background-color: rgb(0, 0, 0);
+            height: 200px;
+        }
+        header h1.logo{
+            width: 200px;
+            height: 100px;
+            float: left;
+        }
+        header nav{
+            width: 600px;
+            height: 50px;
+            background-color: rgb(255, 255, 255);
+            float: right;
+            margin-top: 40px;
+            margin-right: 10px;
+        }
+        nav ul{
+            list-style: none;
+        }
+        nav ul li{
+            float: left;
+        }
+        nav ul li a{
+            display: block;
+            /* A는 인라인 요소이므로 넓이 높이가 적용 안됨
+            그래서 display: block로 블록 요소로 바꿔줌 */
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            text-decoration: none;
+            /* text-decoration: none; 밑줄 삭제 기능 */
+            color: #fff; /* 수정된 부분 */
+        }
+        nav ul li a:hover{
+            background-color: rgb(150, 150, 150);
+        }
+        .img_slider{
+            background-color: rgb(201, 201, 201);
+            height: 300px;
+        }
+        section{
+            background-color: cornflowerblue;
+            height: 300px;
+        }
+        section article{
+            width: 400px;
+            height: 300px;
+            float: left;
+        }
+        section article.notice{
+            background-color: rgb(49, 49, 49);
+        }
+        section article.banner{
+            background-color: rgb(100, 100, 100);
+        }
+        section article.icons{
+            background-color: rgb(150, 150, 150);
+        }
+        /* notice만 적어도 가능은 하지만 협업 속도 향상적으로 봤을때
+        앞에 section을 붙여주면 section 자식으로 있는 notice라는걸 알게 됨 */
+        footer{
+            background-color: crimson;
+            height: 100px;
+            color: #fff;
+        }
+        footer .footer_logo{
+            width: 200px;
+            height: 100px;
+            background-color: rgb(150, 150, 150);
+            float: left;
+        }
+        footer .footer_right{
+            width: 1000px;
+            height: 100px;            
+            background-color: rgb(100, 100, 100);
+            float: left;
+        }
+        footer .footer_menu{
+            /* width = 플로트 하지 않을거면 넓이는 주지 않아도 됨 */
+            height: 50px;
+            background-color: rgb(50, 50, 50);
+        }
+        footer .footer_copy{
+            height: 50px;
+            background-color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <!--div태그는 HTML에서 "division"(구획, 영역)을 의미하며,
+    페이지에서 특정 영역을 그룹화할 때 사용
+    웹 페이지의 특정 부분을 그룹화해서 정리할 때 사용
+    CSS와 함께 사용해서 특정 영역에 스타일을 적용할 수 있음 -->
+    <header>
+        <h1 class="logo">
+            <img src="images/the.png" alt="로고"></h1>
+        <nav>
+            <ul>
+                <li><a href="#">Menu1</a></li>
+                <li><a href="#">Menu2</a></li>
+                <li><a href="#">Menu3</a></li>
+                <li><a href="#">Menu4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- 문서나 섹션의 머리말을 정의 -->
+     <div class="img_slider">
+        <img src="images/slide1.jpg" alt="슬라이더">
+     </div>
+    <section>
+        <article class="notice">공지사항</article>
+        <article class="banner">배너너</article>
+        <article class="icons">아이콘들</article>
+        <!-- 자체적으로 의미를 가짐 <div>는 그저 그룹을 나누는 용도지만,
+        <article>은 "하나의 완전한 콘텐츠 단위" 라는 의미를 포함함. -->
+    </section>
+    <!-- 문서의 일반적인 섹션을 정의 -->
+    <footer>
+        <div class="footer_logo"></div>
+        <div class="footer_right">
+            <div class="footer_menu">메뉴</div>
+            <div class="footer_copy">address</div>
+        </div>
+    </footer>
+    <!-- 문서나 섹션의 바닥글을 정의 -->
+    </div>
+</body>
+</html>
