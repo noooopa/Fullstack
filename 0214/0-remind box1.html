@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remind box 1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            margin-left: 10px;
+            margin-top: 10px;
+            /* margin은 요소 바깥에 위치, 크기에는 영향 없음, 간격조정 가능  */
+            /* padding 콘텐츠와 테두리 사이에 위치, 크기 증가, 간격조정 불가가 */
+            /* margin은 오류가 많고 공부를 많이 해야해서 padding를 많이 사용 */
+            padding-top: 10px;
+            /* padding: 10px;만 입력시시 상하좌우 10px 안여백 */            
+            background-color: #DC143C;
+        }
+        .box2{
+            margin-left: auto;
+            margin-right: auto;
+            /* float: left; 와 같이 사용하면 float만 적용 되지만 오류가 발생 */
+            background-color: #8B0000;
+        }
+        .box3{
+            background-color: #B22222;
+            padding: 10px 20px 30px 40px;
+            /* 위부터 시계방향으로 각각 설정 */
+        }
+        .box4{
+            background-color: #CD5C5C;
+            padding: 10px 20px;
+            /* 상하 - 10px, 좌우 - 20px */
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+</body>
+</html>

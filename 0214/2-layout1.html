@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Layout1</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                width: 1200px;
+                height: 200px;
+                background-color: #f3a36a;
+            }
+            section {
+                float: left;
+                width: 900px;
+                height: 500px;
+                background-color: #FFA07A;
+            }
+            aside {
+                float: left;
+                width: 300px;
+                height: 500px;
+                background-color: #FFD700;
+            }
+            footer {
+                clear: both;
+                /* 줄바꿈 처리할때 사용하지만 좋진 않음
+                float:left, right 둘 다 사용가능하지만
+                오류가 생길 가능성이 높음 */
+                margin-top: 700px;
+                width: 1200px;
+                height: 100px;
+                background-color: #FF6347;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <header>
+                헤더
+            </header>
+            <section>
+                섹션
+            </section>
+            <aside>
+                사이드
+            </aside>
+            <footer>
+                푸터
+            </footer>
+        </div>
+
+    </body>
+</html>

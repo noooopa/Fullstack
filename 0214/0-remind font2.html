@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remind font2</title>
+    <style>
+        .font1{
+            font-family: "궁서";
+            /* Font 종류 : 궁서 */
+            /* 글씨체에는 한글뿐만 아니라 전전부 따옴표를 사용해주는게 좋음
+            여러 문장으로 이루어진 경우 앞 부분만 인식해 적용이 안될 수 있음 */
+            font-size: 36px;
+            /* 글자 크기 */
+            font-weight: bold;
+            /* 굵은 글씨씨 */
+            font-style: italic;
+            /* 기울임 글꼴 */
+            line-height: 2.0;
+            /* 줄 간격격 */
+        }
+        .font2{
+            font: bold italic 36px/2.0 "궁서";
+            /* 위 font1과 같은 요양으로 적게끔 단축할 수 있음음 */
+        }
+        .font3{
+            text-indent: 20px;
+            /* 들여쓰기, -(마이너스)를 입력시 내어쓰기기 */
+        }
+        .font4{
+            letter-spacing: 10px;
+            /* 자간 : 글자와 글자 사이의 글자 */
+        }
+        .font5{
+            font-size: 50;
+            font-weight: bold;
+            text-shadow: 10px 10px 5px #444;
+            /* 글자 그림자 : 상하좌우 블러처리 */
+        }
+        ::-webkit-validation-bubble-text-block
+    </style>
+</head>
+<body>
+    <p>폰트연습 2번째</p>
+    <p class="font1">폰트연습 2번째</p>
+    <p class="font2">폰트연습 2번째</p>
+    <p class="font3">폰트연습 2번째</p>
+    <p class="font4">폰트연습 2번째</p>
+    <p class="font5">폰트연습 2번째</p>
+    <img src="images/slide1.jpg" alt="" width="500" class="img1">
+    <div class="box"></div>
+</body>
+</html>

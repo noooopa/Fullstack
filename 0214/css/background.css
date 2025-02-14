@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0:;
+}
+.back{
+    wigth: 100vh;
+    height: 100vh;
+    /* vh (Viewport Height)는 뷰포트 높이의 비율을 의미하는 CSS 단위,
+    뷰포트(Viewport)는 사용자가 보고 있는 브라우저 창의 화면 영역
+    1vh는 **뷰포트 높이의 1%**를 의미, 화면 높이가 1000px이라면 1vh = 10px */
+}
+.back1{
+    background-color: #fcdfaa;
+    background-image: url(../images/b5.jpg);
+    /* 작업중인 폴더와 다른 폴더를 찾기 위해 나가야 할땐 (../)를 사용 */
+    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
+    /* 배경 이미지는 기본적으로 반복, background-repeat후
+    no-repeat(반복없음), reapat-x(x축 반복), reapat-y(y축 반복) */
+}
+.back2{
+    background-color: #f5e5c7;
+    background-image: url(../images/b1.jpg);
+    background-repeat: no-repeat;
+}   
+.back3{
+    background-color: #FFE4B5;
+    background-image: url(../images/b2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* fixed 는 고정한다는 뜻, 스크롤은 넘어가지만 배경은 고정 됨 */
+    /* 페럴렉스 기술의 일종 */
+}
+.back4{
+    background-color: #FFDEAD;
+    background-image: url(../images/b3.jpg);
+    background-repeat: no-repeat;    
+}
+.back5{
+    background-color: #FFDAB9;
+    background-image: url(../images/b4.jpg);
+    background-repeat: no-repeat;
+}
+.back6{
+    background-image: url(../images/dog1.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    /* 배경의 위치를 설정함 가로 - 세로 순서
+    center center 입력시 정 중앙 배치가능 */
+    background-color: rgb(168, 168, 168);
+}
+.back7{
+    background:rgb(139, 139, 139) url(../images/dog1.jpg) no-repeat 50% 50%;
+    /* 위 .back6번과 동일하게 출력되지만 한줄로 코드 작성 가능 */
+}
