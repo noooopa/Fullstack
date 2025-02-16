@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- 문서의 문자 인코딩을 UTF-8로 설정합니다. -->
+        <meta charset="UTF-8">
+        <!-- 반응형 웹 디자인을 위해 뷰포트 설정을 합니다. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 브라우저 탭에 표시될 문서의 제목을 설정합니다. -->
+        <title>coffee1</title>
+        <style>
+            /* 모든 요소의 기본 마진과 패딩을 제거합니다. */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            /* HTML과 BODY 요소의 높이를 100%로 설정합니다. */
+            html, body {
+                height: 100%;
+            }
+            /* 메인 컨테이너 설정 */
+            #drip {
+                width: 1200px; /* 너비를 1200px로 설정합니다. */
+                margin: 0 auto; /* 중앙 정렬을 위해 좌우 마진을 자동으로 설정합니다. */
+                position: relative; /* 자식 요소의 절대 위치를 기준으로 합니다. */
+                padding-bottom: 50px; /* footer 높이만큼 패딩을 추가합니다. */
+            }
+            /* 헤더 스타일 설정 */
+            header {
+                width: 1200px; /* 너비를 1200px로 설정합니다. */
+                height: auto; /* 높이를 자동으로 설정합니다. */
+                background-color: #333; /* 배경색을 어두운 회색(#333)으로 설정합니다. */
+                position: relative; /* 자식 요소의 절대 위치를 기준으로 합니다. */
+            }
+            /* 헤더 안의 h1 스타일 설정 */
+            header h1 {
+                position: absolute; /* 헤더 안에서 절대 위치를 지정합니다. */
+                top: 50%; /* 상단에서 50% 위치에 배치합니다. */
+                right: 50px; /* 우측에서 50px 떨어진 위치에 배치합니다. */
+                transform: translateY(-50%); /* 수직 중앙 정렬을 합니다. */
+                color: white; /* 글자 색상을 흰색으로 설정합니다. */
+                font-size: 3em; /* 글자 크기를 3em으로 설정합니다. */
+            }
+            /* 네비게이션 바 스타일 설정 */
+            nav {
+                height: 60px; /* 높이를 60px로 설정합니다. */
+                background-color: #341f11; /* 배경색을 어두운 갈색(#341f11)으로 설정합니다. */
+            }
+            /* 네비게이션 바의 리스트 스타일 설정 */
+            nav ul {
+                list-style: none; /* 리스트 스타일을 제거합니다. */
+            }
+            /* 네비게이션 바의 리스트 아이템 스타일 설정 */
+            nav ul li {
+                float: left; /* 왼쪽으로 정렬합니다. */
+                margin-left: 50px; /* 왼쪽 마진을 50px로 설정합니다. */
+                margin-top: 10px; /* 상단 마진을 10px로 설정합니다. */
+            }
+            /* 네비게이션 바의 링크 스타일 설정 */
+            nav ul li a {
+                display: block; /* 블록 요소로 설정합니다. */
+                width: 180px; /* 너비를 180px로 설정합니다. */
+                height: 40px; /* 높이를 40px로 설정합니다. */
+                line-height: 40px; /* 줄 높이를 40px로 설정하여 텍스트를 중앙에 배치합니다. */
+                text-align: center; /* 텍스트를 중앙 정렬합니다. */
+                text-decoration: none; /* 텍스트 장식을 제거합니다. */
+                color: #ffffff; /* 글자 색상을 흰색으로 설정합니다. */
+            }
+            /* 메인 섹션 스타일 설정 */
+            .main {
+                height: 800px; /* 높이를 800px로 설정합니다. */
+            }
+            /* 메인 섹션의 h2 스타일 설정 */
+            .main h2 {
+                text-align: center; /* 텍스트를 중앙 정렬합니다. */
+                padding: 10px; /* 상하 패딩을 10px로 설정합니다. */
+            }
+            /* 섹션 스타일 설정 */
+            section {
+                width: 800px; /* 너비를 800px로 설정합니다. */
+                height: 800px; /* 높이를 800px로 설정합니다. */
+                background-color: #ccc; /* 배경색을 밝은 회색(#ccc)으로 설정합니다. */
+                float: left; /* 왼쪽으로 정렬합니다. */
+            }
+            /* 섹션의 h2 스타일 설정 */
+            section h2 {
+                padding: 10px 0; /* 상하 패딩을 10px로 설정합니다. */
+            }
+            /* 아티클 스타일 설정 */
+            section article {
+                width: 350px; /* 너비를 350px로 설정합니다. */
+                height: 350px; /* 높이를 350px로 설정합니다. */
+                border: 1px solid #333; /* 테두리를 1px 실선(#333)으로 설정합니다. */
+                float: left; /* 왼쪽으로 정렬합니다. */
+                margin: 0 0 15px 30px; /* 하단 마진을 15px, 왼쪽 마진을 30px로 설정합니다. */
+                text-align: justify; /* 텍스트를 양쪽 정렬합니다. */
+                background-color: #fff; /* 배경색을 흰색으로 설정합니다. */
+            }
+            /* 아티클의 h2 스타일 설정 */
+            article h2 {
+                padding: 10px 0 10px 10px; /* 상하 패딩을 10px, 왼쪽 패딩을 10px로 설정합니다. */
+            }
+            /* 아티클의 p 스타일 설정 */
+            article p {
+                padding: 0 10px; /* 좌우 패딩을 10px로 설정합니다. */
+                font-size: 20px; /* 글자 크기를 20px로 설정합니다. */
+                text-align: justify; /* 텍스트를 양쪽 정렬합니다. */
+            }
+            /* 사이드바 스타일 설정 */
+            aside {
+                width: 400px; /* 너비를 400px로 설정합니다. */
+                height: 800px; /* 높이를 800px로 설정합니다. */
+                background-color: #523929; /* 배경색을 어두운 갈색(#523929)으로 설정합니다. */
+                float: left; /* 왼쪽으로 정렬합니다. */
+                text-align: center; /* 텍스트를 중앙 정렬합니다. */
+            }
+            /* 사이드바의 h2 스타일 설정 */
+            aside h2 {
+                padding: 10px 0; /* 상하 패딩을 10px로 설정합니다. */
+                color: white; /* 글자 색상을 흰색으로 설정합니다. */
+            }
+            /* 사이드바의 이미지 스타일 설정 */
+            aside img {
+                height: 220px; /* 높이를 220px로 설정합니다. */
+                padding-bottom: 20px; /* 하단 패딩을 20px로 설정합니다. */
+            }
+            /* 푸터 스타일 설정 */
+            footer {
+                text-align: center; /* 텍스트를 중앙 정렬합니다. */
+                padding-top: 10px; /* 상단 패딩을 10px로 설정합니다. */
+                height: 50px; /* 높이를 50px로 설정합니다. */
+                background-color: #333; /* 배경색을 어두운 회색(#333)으로 설정합니다. */
+                color: #fff; /* 글자 색상을 흰색으로 설정합니다. */
+                position: relative; /* 위치를 상대적으로 설정합니다. */
+                width: 100%; /* 너비를 100%로 설정합니다. */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="drip">
+            <!-- 헤더 섹션 -->
+            <header>
+                <div class="banner">
+                    <img src="images/top2.jpg" alt="" width="1200">
+                </div>
+                <h1>Joandora</h1>
+            </header>
+            <!-- 네비게이션 바 -->
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">회사소개</a>
+                    </li>
+                    <li>
+                        <a href="#">제품소개</a>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                    </li>
+                    <li>
+                        <a href="#">다운로드</a>
+                    </li>
+                    <li>
+                        <a href="#">고객지원</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 메인 섹션 -->
+            <div class="main">
+                <section>
+                    <h2>커피의 종류</h2>
+                    <article>
+                        <h2>에스프레소</h2>
+                        <p>
+                            에스프레소는 커피 원액입니다. 잘 갈린 커피 원두를 고온, 고압으로 추출해 먹는것을 에스프레소라고 합니다 모든 커피에 기본이 됩니다.
+                        </p>
+                    </article>
+                    <article>
+                        <h2>아메리카노</h2>
+                        <p>
+                            아메리카노는 에스프레소와 물을 섞어 에스프레소의 진한 맛을 순화시킨 것인데요 아메리카노의 유래가 미국에서 시작 되어 아메리카노라고
+                            불리운다고합니다.
+                        </p>
+                    </article>
+                    <article>
+                        <h2>카페라떼</h2>
+                        <p>
+                            카페라떼는 에스프레소와 스팀우유, 우유거품이 들어가 있는 커피입니다. 에스프레소 1샷을 추출하고 그위에 스팀우유를 붓고 우유거품을 그위에
+                            올리게되면 카페라떼가 완성됩니다
+                        </p>
+                    </article>
+                    <article>
+                        <h2>카푸치노</h2>
+                        <p>
+                            카푸치노는 카페라떼와 들어가는 재료는 똑같습니다. 하지만 제조방법이 다르죠 카페라떼보다 스팀우유의 양이 덜들어가고 우유거품의 양이 더 많이
+                            들어가 부드럽고 진한 맛을 느낄수 있습니다.
+                        </p>
+                    </article>
+                </section>
+                <!-- 사이드바 -->
+                <aside>
+                    <h2>커피사진</h2>
+                    <img src="images/c2.jpg" alt="coffee1" width="350px">
+                    <img src="images/c3.jpg" alt="coffee2" width="350px">
+                    <img src="images/c4.jpg" alt="coffee3" width="350px">
+                </aside>
+            </div>
+            <!-- 푸터 -->
+            <footer>
+                Copyright ⓒ 2025 Joandora
+            </footer>
+        </div>
+    </body>
+</html>
