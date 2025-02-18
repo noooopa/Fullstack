@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=+
+    , initial-scale=1.0">
+    <title>position 1</title>
+    <style>
+        body{
+            margin: 3000px;
+            padding: 0;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            background-color: salmon;
+        }
+        .box2{
+            background-color: skyblue;
+        }
+        .box3{
+            position: absolute;
+            /* position: absolute = 부모가 기준위치가 되므로 자리값이 없어짐(겹쳐짐)
+            상하좌우로 부모 영역내에 어디든 위치함,
+            box3이 이동하면 4번이 3번 자리로 이동함함  */
+            background-color: yellow;
+        }
+        .box4{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+</body>
+</html>

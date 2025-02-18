@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1000px;
+    height: 221px;
+    border: 1px solid #000 ;
+    margin-right: auto;
+    margin-left: auto;
+}
+.slider{
+    width: 1000px;
+    height: 221px;
+    overflow: hidden;
+    position: relative;
+}
+.box{
+    width: 308px;
+    height: 178px;
+    border: 1px solid #000;
+    float: left;
+    margin-top: 20px;
+    margin-left: 18px;
+}
+.color1{
+    background-color: #53a000;
+    padding: 0 8px;
+}
+.color2{
+    background-color: #416ffa;
+    padding: 0 8px;
+}
+.color3{
+    background-color: #b57500;
+    padding: 0 8px;
+}
+

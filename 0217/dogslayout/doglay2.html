@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- 문서의 문자 인코딩을 UTF-8로 설정합니다. -->
+        <meta charset="UTF-8">
+        <!-- 반응형 웹 디자인을 위해 뷰포트 설정을 합니다. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 브라우저 탭에 표시될 문서의 제목을 설정합니다. -->
+        <title>Document</title>
+        <style>
+            /* 모든 요소의 기본 마진과 패딩을 제거합니다. */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            /* 메인 컨테이너 설정 */
+            .container {
+                width: 900px; /* 너비를 900px로 설정합니다. */
+                margin: 0 auto; /* 중앙 정렬을 위해 좌우 마진을 자동으로 설정합니다. */
+            }
+            /* 헤더 스타일 설정 */
+            header {
+                height: 200px; /* 높이를 200px로 설정합니다. */
+                background-color: #f46075; /* 배경색을 핑크색(#f46075)으로 설정합니다. */
+            }
+            /* 헤더 안의 h1 스타일 설정 */
+            header h1 {
+                float: left; /* 왼쪽으로 정렬합니다. */
+                margin-left: 50px; /* 왼쪽 마진을 50px로 설정합니다. */
+                margin-top: 70px; /* 상단 마진을 70px로 설정합니다. */
+                color: white; /* 글자 색상을 흰색으로 설정합니다. */
+            }
+            /* 헤더 안의 로고 이미지 스타일 설정 */
+            header .logo_p {
+                margin-right: 20px; /* 오른쪽 마진을 20px로 설정합니다. */
+                margin-top: 20px; /* 상단 마진을 20px로 설정합니다. */
+                float: right; /* 오른쪽으로 정렬합니다. */
+            }
+            /* 네비게이션 바 스타일 설정 */
+            nav {
+                height: 50px; /* 높이를 50px로 설정합니다. */
+                background-color: #ccc; /* 배경색을 회색(#ccc)으로 설정합니다. */
+            }
+            /* 네비게이션 바의 리스트 스타일 설정 */
+            nav ul {
+                list-style: none; /* 리스트 스타일을 제거합니다. */
+            }
+            /* 네비게이션 바의 리스트 아이템 스타일 설정 */
+            nav ul li {
+                float: left; /* 왼쪽으로 정렬합니다. */
+                width: 200px; /* 너비를 200px로 설정합니다. */
+                padding: 0 5px; /* 좌우 패딩을 5px로 설정합니다. */
+                margin-left: 15px; /* 왼쪽 마진을 15px로 설정합니다. */
+            }
+            /* 네비게이션 바의 링크 스타일 설정 */
+            nav ul li a {
+                display: block; /* 블록 요소로 설정합니다. */
+                width: 200px; /* 너비를 200px로 설정합니다. */
+                height: 50px; /* 높이를 50px로 설정합니다. */
+                line-height: 40px; /* 줄 높이를 40px로 설정하여 텍스트를 중앙에 배치합니다. */
+                text-align: center; /* 텍스트를 중앙 정렬합니다. */
+                text-decoration: none; /* 텍스트 장식을 제거합니다. */
+                color: #fff; /* 글자 색상을 흰색으로 설정합니다. */
+            }
+            /* 네비게이션 바의 링크에 마우스를 올렸을 때 스타일 설정 */
+            nav ul li a:hover {
+                background-color: #f46075; /* 배경색을 핑크색(#f46075)으로 설정합니다. */
+                color: #fff; /* 글자 색상을 흰색으로 설정합니다. */
+            }
+            /* 서브메뉴 스타일 설정 */
+            nav ul li ul {
+                display: none; /* 기본적으로 서브메뉴를 숨깁니다. */
+                color: rgb(255, 255, 255); /* 글자 색상을 흰색으로 설정합니다. */
+                background-color: #f46075; /* 배경색을 핑크색(#f46075)으로 설정합니다. */
+                padding: 0; /* 패딩을 제거합니다. */
+                width: 200px; /* 너비를 200px로 설정합니다. */
+                text-align: center; /* 텍스트를 중앙 정렬합니다. */
+            }
+            /* 메인 메뉴에 마우스를 올렸을 때 서브메뉴를 표시 */
+            nav ul li:hover ul {
+                display: block; /* 서브메뉴를 표시합니다. */
+                color: rgb(255, 255, 255); /* 글자 색상을 흰색으로 설정합니다. */
+                position: absolute; /* 절대 위치를 설정합니다. */
+                text-align: center; /* 텍스트를 중앙 정렬합니다. */
+            }
+            /* 서브메뉴의 리스트 아이템 스타일 설정 */
+            nav ul li ul li {
+                padding: 5px 0; /* 상하 패딩을 5px로 설정합니다. */
+                width: 100%; /* 너비를 100%로 설정합니다. */
+            }
+            /* 메인 섹션 스타일 설정 */
+            .main {
+                height: 550px; /* 높이를 550px로 설정합니다. */
+            }
+            /* 메인 섹션의 h2 스타일 설정 */
+            .main h2 {
+                text-align: center; /* 텍스트를 중앙 정렬합니다. */
+                padding: 10px; /* 상하 패딩을 10px로 설정합니다. */
+            }
+            /* 섹션 스타일 설정 */
+            section {
+                width: 650px; /* 너비를 650px로 설정합니다. */
+                height: 550px; /* 높이를 550px로 설정합니다. */
+                background-color: skyblue; /* 배경색을 하늘색으로 설정합니다. */
+                float: left; /* 왼쪽으로 정렬합니다. */
+            }
+            /* 섹션의 h2 스타일 설정 */
+            section h2 {
+                padding: 10px 0; /* 상하 패딩을 10px로 설정합니다. */
+            }
+            /* 아티클 스타일 설정 */
+            section article {
+                width: 280px; /* 너비를 280px로 설정합니다. */
+                height: 210px; /* 높이를 210px로 설정합니다. */
+                border: 1px solid #333; /* 테두리를 1px 실선(#333)으로 설정합니다. */
+                float: left; /* 왼쪽으로 정렬합니다. */
+                margin: 0 0 15px 30px; /* 하단 마진을 15px, 왼쪽 마진을 30px로 설정합니다. */
+                font-size: 13px; /* 글자 크기를 13px로 설정합니다. */
+                text-align: justify; /* 텍스트를 양쪽 정렬합니다. */
+                background-color: #fff; /* 배경색을 흰색으로 설정합니다. */
+            }
+            /* 아티클의 h3 스타일 설정 */
+            article h3 {
+                padding: 10px 0 10px 10px; /* 상하 패딩을 10px, 왼쪽 패딩을 10px로 설정합니다. */
+            }
+            /* 아티클의 p 스타일 설정 */
+            article p {
+                padding: 0 10px; /* 좌우 패딩을 10px로 설정합니다. */
+                font-size: 13px; /* 글자 크기를 13px로 설정합니다. */
+                text-align: justify; /* 텍스트를 양쪽 정렬합니다. */
+            }
+            /* 사이드바 스타일 설정 */
+            aside {
+                width: 250px; /* 너비를 250px로 설정합니다. */
+                height: 550px; /* 높이를 550px로 설정합니다. */
+                background-color: #ffffcc; /* 배경색을 연한 노란색(#ffffcc)으로 설정합니다. */
+                float: left; /* 왼쪽으로 정렬합니다. */
+                text-align: center; /* 텍스트를 중앙 정렬합니다. */
+            }
+            /* 사이드바의 h2 스타일 설정 */
+            aside h2 {
+                padding: 10px 0; /* 상하 패딩을 10px로 설정합니다. */
+            }
+            /* 사이드바의 이미지 스타일 설정 */
+            aside img {
+                padding-bottom: 10px; /* 하단 패딩을 10px로 설정합니다. */
+            }
+            /* 푸터 스타일 설정 */
+            footer {
+                text-align: center; /* 텍스트를 중앙 정렬합니다. */
+                padding-top: 10px; /* 상단 패딩을 10px로 설정합니다. */
+                height: 50px; /* 높이를 50px로 설정합니다. */
+                background-color: #333; /* 배경색을 어두운 회색(#333)으로 설정합니다. */
+                color: #fff; /* 글자 색상을 흰색으로 설정합니다. */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- 헤더 섹션 -->
+            <header>
+                <h1>DogHouse</h1>
+                <div class="logo_p">
+                    <img src="ima/nav2.png" alt="">
+                </div>
+            </header>
+            <!-- 네비게이션 바 -->
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">애완견 종류</a>
+                        <ul>
+                            <li><a href="#">대형견</a></li>
+                            <li><a href="#">중형견</a></li>
+                            <li><a href="#">소형견</a></li>
+                            <li><a href="#">특수견</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">입양 하기</a>
+                        <ul>
+                            <li><a href="#">보호소</a></li>
+                            <li><a href="#">펫샵</a></li>
+                            <li><a href="#">임시보호</a></li>
+                            <li><a href="#">애견카페</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">건강 돌보기</a>
+                        <ul>
+                            <li><a href="#">의료관련</a></li>
+                            <li><a href="#">식단, 간식</a></li>
+                            <li><a href="#">주변 환경</a></li>
+                            <li><a href="#">스킨 케어</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">더불어 살기</a>
+                        <ul>
+                            <li><a href="#">산책, 여행</a></li>
+                            <li><a href="#">맹견의 종류</a></li>
+                            <li><a href="#">오프리쉬</a></li>
+                            <li><a href="#">안내견</a></li> 
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 메인 섹션 -->
+            <div class="main">
+                <section>
+                    <h2>강아지 용품 준비하기</h2>
+                    <article>
+                        <h3>강아지 집</h3>
+                        <p>
+                            강아지가 편히 쉴 수 있는 포근한 집이 필요합니다. 강아지의 집은 강아지가 다 큰 후에도 계속 쓸 수 있는 집으로 구입하세요. 집을 구입하실
+                            때는 박음질이 잘 되어 있는지, 세탁이 간편한 제품인지 꼭 확인하시고 고르시는 것이 좋습니다.
+                        </p>
+                    </article>
+                    <article>
+                        <h3>강아지 먹이</h3>
+                        <p>
+                            강아지의 먹이는 꼭 어린 강아지용으로 나와있는 사료를 선택하세요. 강아지들은 사람에 비해 성장속도가 8배정도 빠르답니다. 따라서 강아지에게는
+                            성장속도에 맞는 사료를 급여하셔야 합니다. 사람이 먹는 음식을 먹게 되면 양념과 향신료에 입맛이 익숙해지고, 비만이 될 가능성이 매우
+                            높아집니다. 강아지용 사료는 생후 12개월까지 급여하셔야 합니다.
+                        </p>
+                    </article>
+                    <article>
+                        <h3>밥그릇, 물병</h3>
+                        <p>
+                            밥그릇은 쉽게 넘어지지 않도록 바닥이 넓은 것이 좋습니다. 물병은 대롱이 달린 것으로 선택하세요. 밥그릇에 물을 주게 되면 입 주변에 털이 모두
+                            젖기 때문에 비위생적이므로 대롱을 통해서 물을 먹을 수 있는 물병을 마련하시는 것이 좋습니다.
+                        </p>
+                    </article>
+                    <article>
+                        <h3>이름표, 목줄</h3>
+                        <p>
+                            강아지를 잃어버릴 염려가 있으니 산책할 무렵이 되면 이름표를 꼭 목에 걸어주도록 하세요. 그리고 방울이 달린 목걸이를 하고자 하실 때는
+                            신중하셔야 합니다. 움직일 때마다 방울이 딸랑 거리면 신경이 예민한 강아지들에게는 좋지 않은 영향을 끼칠 수 있기 때문입니다.
+                        </p>
+                    </article>
+                </section>
+                <!-- 사이드바 -->
+                <aside>
+                    <h2>애완견 사진</h2>
+                    <img src="ima/1.png" alt="강아지1">
+                    <img src="ima/2.png" alt="강아지2">
+                    <img src="ima/3.png" alt="강아지3">
+                </aside>
+            </div>
+            <!-- 푸터 -->
+            <footer>
+                Copyright ⓒ 2025 DogHouse
+            </footer>
+        </div>
+    </body>
+</html>
