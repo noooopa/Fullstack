@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+header {
+    width: 1000px;
+    height: 250px;
+    border: 1px solid #333;
+    margin: 0 auto;
+}
+.logo {
+    position: absolute;
+    width: 484px;
+    height: 90px;
+    left: 42%;
+    margin-left: -100px;
+    top: 13%;
+    margin-top: -45px;
+}
+.logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.sns {
+    top: 20px;
+    left: 10px;
+    float: left;
+    top: 20px;
+    left: 10px;
+}
+.sns li {
+    float: left;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.lnb {
+    top: 20px;
+    right: 10px;
+    float: right;
+    top: 20px;
+    right: 10px;
+}
+.lnb li {
+    float: left;
+    padding: 0 10px;
+    background: url("../images/bar.gif") no-repeat 100% 50%;
+}
+.lnb li:last-child {
+    background: none;
+}
+.main_menu {
+    position: absolute;
+    width: 100%;
+    top: 250px;
+    left: 0;
+}
+.gnb {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+.main_menu .shadow {
+    width: 100%;
+    background-color: rgba(42, 44, 128, 0.548);
+    position: absolute;
+    left: 0;
+    top: 30px;
+    height: 100px;
+    display: none;
+}
+.gnb:hover + .shadow {
+    display: block;
+}
+.gnb > li {
+    float: left;
+    text-align: center;
+    background-color: #333;
+}
+.gnb li a {
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 30px;
+    color: aliceblue;
+}
+.gnb li ul {
+    background-color: rgba(240, 248, 255, 0);
+    position: absolute;
+    display: none;
+    height: 120px;
+    padding: 10px 0;
+}
+.gnb:hover li ul {
+    display: block;
+}
+.main1 {
+    width: 1000px;
+    height: 600px;
+    position: relative;
+    border: 1px solid #333;
+    margin: 0 auto;
+
+}
+.main1 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

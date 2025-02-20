@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAV</title>
+</head>
+<body>
+    <!-- ul>(li>a[href="#"]{Mainmenu$})*4
+    Emmet 문법을 사용하여 HTML 구조를 빠르게 생성하는 방법 -->
+    <ul class="gnb">
+        <li><a href="#">Mainmenu1</a>
+            <!-- ul>(li>a[href="#"]{Submenu$})*4 -->
+            <ul>
+                <li><a href="#">Submenu1</a></li>
+                <li><a href="#">Submenu2</a></li>
+                <li><a href="#">Submenu3</a></li>
+                <li><a href="#">Submenu4</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Mainmenu2</a></li>
+        <li><a href="#">Mainmenu3</a></li>
+        <li><a href="#">Mainmenu4</a></li>
+    </ul>
+</body>
+</html>

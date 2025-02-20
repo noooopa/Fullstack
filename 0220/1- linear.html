@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linear</title>
+    <style>
+        div{
+            width: 500px;
+            height: 300px;
+            border-radius: 10px;
+        }
+        .grad1{
+            background: blue;
+            background: linear-gradient(to right bottom, blue, white);
+            /* 왼쪽 위에서 오른쪽 아래방향으로, 블루 ->화이트 그라데이션 */
+        }
+        .grad2{
+            background: rgb(255, 0, 0);
+            /* css3를 지원하지 않는 브라우저용
+            css3 이후 개발된 기능이라 이전 버전만 지원하는 브라우저에선
+            빨간색만이라도 나오게 설정해 두는것 */
+            background: linear-gradient(45deg, rgb(255, 0, 0), white);
+            /* 45도(오른쪽 위)방향으로, 레드->화이트 */
+        }
+        .grad3{
+            background: #06f;
+            background: linear-gradient(to bottom, #06f, white 30%, #06f);
+            /* 위에서부터 파란색 30%위치에 흰색 나머지 파란색 */
+        }
+    </style>
+</head>
+<body>
+    <div class="grad1"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+</body>
+</html>
