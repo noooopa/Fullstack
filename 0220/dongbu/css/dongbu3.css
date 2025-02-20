@@ -1,0 +1,130 @@
+/* 모든 요소의 기본 마진과 패딩을 제거합니다. */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ul과 li 요소의 기본 리스트 스타일을 제거합니다. */
+li, ul {
+    list-style: none;
+}
+/* a 태그의 기본 텍스트 장식을 제거하고, 글자 색상을 흰색으로 설정합니다. */
+a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+/* 헤더 외부 컨테이너 스타일 설정 */
+.header_out {
+    height: 700px; /* 높이를 700px로 설정합니다. */
+    width: 100%; /* 너비를 100%로 설정합니다. */
+    background: url("../images/main2.jpg") no-repeat 50% 50% / cover;
+    /* 배경 이미지를 설정하고, 중앙에 위치시키며, 커버 모드로 설정합니다. */
+}
+/* 헤더 스타일 설정 */
+header {
+    position: relative; /* 상대 위치를 설정합니다. */
+    width: 100%; /* 너비를 100%로 설정합니다. */
+    height: 70px; /* 높이를 70px로 설정합니다. */
+}
+/* 네비게이션 바의 라인 스타일 설정 */
+header nav .line {
+    position: absolute; /* 절대 위치를 설정합니다. */
+    height: 1px; /* 높이를 1px로 설정합니다. */
+    width: 1400px; /* 너비를 1400px로 설정합니다. */
+    top: 69px; /* 상단에서 69px 아래에 위치시킵니다. */
+    background-color: #fff; /* 배경색을 흰색으로 설정합니다. */
+    z-index: 10; /* z-index를 10으로 설정하여 다른 요소 위에 표시되도록 합니다. */
+    left: 50%; /* 왼쪽에서 50% 위치에 설정합니다. */
+    transform: translate(-50%,0); /* 중앙 정렬을 위해 변환합니다. */
+}
+/* 네비게이션 바의 ul 스타일 설정 */
+header > nav > ul {
+    width: 1000px; /* 너비를 1000px로 설정합니다. */
+    height: 70px; /* 높이를 70px로 설정합니다. */
+    position: relative; /* 상대 위치를 설정합니다. */
+    margin: 0 auto; /* 중앙 정렬을 위해 좌우 마진을 자동으로 설정합니다. */
+}
+/* 네비게이션 바의 li 스타일 설정 */
+header nav ul li {
+    float: left; /* 왼쪽으로 정렬합니다. */
+    position: relative; /* 상대 위치를 설정합니다. */
+}
+/* 네비게이션 바의 a 태그 스타일 설정 */
+header nav ul li a {
+    display: block; /* 블록 요소로 설정합니다. */
+    width: 200px; /* 너비를 200px로 설정합니다. */
+    height: 70px; /* 높이를 70px로 설정합니다. */
+    line-height: 70px; /* 줄 높이를 70px로 설정하여 텍스트를 중앙에 배치합니다. */
+    position: relative; /* 상대 위치를 설정합니다. */
+    text-align: center; /* 텍스트를 중앙 정렬합니다. */
+}
+/* 서브메뉴의 ul 스타일 설정 */
+header nav ul li ul {
+    display: none; /* 기본적으로 서브메뉴를 숨깁니다. */
+    position: absolute; /* 절대 위치를 설정합니다. */
+    top: 70px; /* 부모 메뉴 아래에 위치하도록 설정합니다. */
+    left: 0; /* 왼쪽에 위치하도록 설정합니다. */
+    width: 200px; /* 너비를 200px로 설정합니다. */
+    background-color: #042e6f; /* 배경색을 설정합니다. */
+    z-index: 1000; /* z-index를 1000으로 설정하여 다른 요소 위에 표시되도록 합니다. */
+}
+/* 서브메뉴의 a 태그 스타일 설정 */
+header nav ul li ul a {
+    font-size: 14px; /* 글자 크기를 14px로 설정합니다. */
+    background-color: #042e6f; /* 배경색을 설정합니다. */
+    display: block; /* 블록 요소로 설정합니다. */
+    text-align: center; /* 텍스트를 중앙 정렬합니다. */
+}
+/* 메인 메뉴에 마우스를 올렸을 때 서브메뉴를 표시 */
+header nav ul li:hover ul {
+    display: block; /* 서브메뉴를 표시합니다. */
+}
+/* 서브메뉴의 a 태그에 마우스를 올렸을 때 배경색 변경 */
+header nav ul li ul a:hover {
+    background-color: #024a9f; /* 배경색을 변경합니다. */
+}
+
+/* 메인 메뉴의 a 태그에 가상 요소를 추가하여 배경을 설정 */
+header nav ul li a::before {
+    content: ''; /* 가상 요소의 내용을 비웁니다. */
+    position: absolute; /* 절대 위치를 설정합니다. */
+    left: 0; /* 왼쪽에 위치하도록 설정합니다. */
+    top: 100%; /* 부모 요소의 아래에 위치하도록 설정합니다. */
+    width: 100vw; /* 화면 너비 100%로 설정합니다. */
+    height: 100vh; /* 화면 높이 100%로 설정합니다. */
+    background-color: #042e6f; /* 배경색을 설정합니다. */
+    z-index: -1; /* z-index를 -1로 설정하여 다른 요소 뒤에 표시되도록 합니다. */
+    transition: all 0.3s; /* 모든 속성의 변환 시간을 0.3초로 설정합니다. */
+    opacity: 0; /* 기본적으로 투명하게 설정합니다. */
+}
+
+/* 메인 메뉴의 a 태그에 마우스를 올렸을 때 배경을 표시 */
+header nav ul li a:hover::before {
+    opacity: 1; /* 불투명하게 설정하여 배경을 표시합니다. */
+}
+
+/* a 태그의 가상 요소를 추가하여 하단에 선을 설정 */
+a::after {
+    content: ''; /* 가상 요소의 내용을 비웁니다. */
+    position: absolute; /* 절대 위치를 설정합니다. */
+    left: 0; /* 왼쪽에 위치하도록 설정합니다. */
+    bottom: 0; /* 하단에 위치하도록 설정합니다. */
+    width: 100%; /* 너비를 100%로 설정합니다. */
+    height: 1.5px; /* 높이를 1.5px로 설정합니다. */
+    background-color: #fff; /* 배경색을 흰색으로 설정합니다. */
+    transition: all 0.3s; /* 모든 속성의 변환 시간을 0.3초로 설정합니다. */
+    transform: scale(0,1); /* 초기 크기를 0으로 설정합니다. */
+}
+
+/* 메인 메뉴의 a 태그에 가상 요소를 추가하여 하단에 선을 설정 */
+header > nav > ul > li > a::after {
+    height: 3px; /* 높이를 3px로 설정합니다. */
+    width: 100%; /* 너비를 100%로 설정합니다. */
+}
+
+/* a 태그에 마우스를 올렸을 때 하단의 선을 표시 */
+a:hover::after {
+    width: 100%; /* 너비를 100%로 설정합니다. */
+    transform: scale(1,1); /* 크기를 1로 설정하여 선을 표시합니다. */
+}
