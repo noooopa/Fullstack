@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    margin-right: auto;
+    margin-left: auto;
+    width: 700px;
+    height: 700px;
+    background-color: #999999;
+}
+
+.face {
+    box-sizing: border-box;
+    width: 700px;
+    height: 700px;
+    background-color: #3ec5f1;
+    border-radius: 100%;
+    position: absolute;
+    border: 5px solid #000000;
+}
+
+.eye1 {
+    box-sizing: border-box;
+    border: 3px solid #000000;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 100%;
+    position: relative;
+    left: 50px;
+    top: 220px;
+}
+
+.eye2 {
+    box-sizing: border-box;
+    border: 3px solid #000000;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 100%;
+    position: relative;
+    left: 620px;
+    top: 200px;
+}
+
+.nose {
+    width: 60px;
+    height: 45px;
+    background-color: black;
+    border-radius: 100%;
+    position: relative;
+    left: 320px;
+    top: 320px;
+    border: 3px solid #000000;
+    z-index: 3;
+}
+
+.mouse1 {
+    box-sizing: border-box;
+    width: 85px;
+    height: 105px;
+    transform: rotate(50deg);
+    border: 3px solid #333;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%;
+    position: relative;
+    left: 280px;
+    top: 285px;
+}
+
+.mouse2 {
+    width: 75px;
+    height: 100px;
+    transform: rotate(-50deg);
+    border: 3px solid #333;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%;
+    position: relative;
+    left: 350px;
+    top: 185px;
+}
+.box_1 {
+    z-index: 5;
+    position: absolute;
+}
+
+.box_2 {
+    z-index: 5;
+    position: absolute;
+    left: ;
+}
+
+.box_2 .line1{
+    width: 150px;
+    height: 3px;
+    background-color: black;
+    transform: rotate(25deg);
+    position: absolute;
+    top: 80px;
+}
+.box_2 .line2{
+    width: 150px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    left: px;
+}
+.box_2 .line3{
+    width: 150px;
+    height: 3px;
+    background-color: black;
+    transform: rotate(-25deg);
+    position: absolute;
+    bottom: 80px;
+}

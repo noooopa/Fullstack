@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+#balloon{
+    position: relative;
+    left:10px;
+    height: 160px;
+    width: 116px;
+    background: url(img/bg-main1.png) no-repeat 50% 50%; 
+    animation: balloon 3s infinite alternate;
+}
+@keyframes balloon {
+    0%{top:10px left:30px}
+    100%{top:10px left:30px;}
+}
+
+#balloon2{
+    position: relative;
+    left:500px;
+    height: 160px;
+    width: 116px;
+    background: url(img/bg-main1.png) no-repeat 50% 50%; 
+    animation: balloon2 3s infinite alternate;
+}
+@keyframes balloon2 {
+    0%{top:50px left:500px}
+    100%{top:550px left:500px;}
+}
+</style>
+</head>
+<body>
+    <div id="balloon"></div>
+    <div id="balloon2"></div>
+</body>
+</html>

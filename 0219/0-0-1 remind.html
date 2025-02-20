@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=+
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=+, initial-scale=1.0">
     <title>position</title>
     <style>
+        body{
+            height: 3000px;
+        }
         .box{
             width: 200px;
             height: 200px;
@@ -21,6 +23,7 @@
             background-color: skyblue;
         }
         .box3{
+            background-color: yellow;
             position: relative;
             /* position: relative = top과 left로 위치조정
             원래있던 위치에서 이동, 자리값이 있고, absolte의 부모역할(기준),
@@ -28,14 +31,16 @@
             같은 태그면 나중에 만든 태그가 위로 올라옴 */
             top: 50px;
             left: 50px;
-            background-color: yellow;
             z-index: 1;
             /* 같은 포지션에서는 z-index값이 높은 사항이 위로 올라옴 */
         }
         /*  */
         .box4{
-            position: relative;
             background-color: green;
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+            /* fixed는 화면에 스크롤시 자릿값이 고정된다. */
         }
     </style>
 </head>
