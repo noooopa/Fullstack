@@ -1,0 +1,137 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: p;
+        }
+
+        @media screen and (max-width:600px) {
+            #wrap {
+                width: 100%;
+                /* margin: 0 auto; */
+            }
+
+            header {
+                height: 150px;
+                background-color: rgb(68, 0, 255);
+            }
+
+            nav {
+                height: 140px;
+                background-color: rgb(98, 40, 255);
+            }
+
+            section {
+                /* width: 650px; */
+                height: 500px;
+                background-color: rgb(135, 92, 253);
+                float: none;
+            }
+
+            aside {
+                width: 100%;
+                height: 500px;
+                background-color: rgb(165, 132, 255);
+                float: none;
+            }
+
+            footer {
+                /* clear: both; */
+                height: 70px;
+                background-color: rgb(191, 167, 255);
+            }
+        }
+
+        @media screen and (min-width:601px) and (max-width:1023px) {
+            #wrap {
+                width: 580px;
+                margin: 0 auto;
+            }
+
+            header {
+                height: 200px;
+                background-color: rgb(255, 0, 76);
+            }
+
+            nav {
+                height: 70px;
+                background-color: rgb(255, 39, 103);
+            }
+
+            section {
+                /* width: 650px; */
+                height: 500px;
+                background-color: rgb(255, 87, 137);
+                float: none;
+            }
+
+            aside {
+                /* width: 250px; */
+                height: 200px;
+                background-color: rgb(255, 111, 154);
+                float: none;
+            }
+
+            footer {
+                /* clear: both; */
+                height: 70px;
+                background-color: rgb(255, 167, 194);
+            }
+        }
+
+        @media screen and (min-width:1024px) {
+            #wrap {
+                width: 900px;
+                margin: 0 auto;
+            }
+
+            header {
+                height: 200px;
+                background-color: rgb(41, 41, 41);
+            }
+
+            nav {
+                height: 70px;
+                background-color: rgb(82, 82, 82);
+            }
+
+            section {
+                width: 650px;
+                height: 500px;
+                background-color: rgb(121, 121, 121);
+                float: left;
+            }
+
+            aside {
+                width: 250px;
+                height: 500px;
+                background-color: rgb(161, 161, 161);
+                float: left;
+            }
+
+            footer {
+                clear: both;
+                height: 70px;
+                background-color: rgb(201, 201, 201);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header>해더</header>
+        <nav>네비</nav>
+        <section>섹션</section>
+        <aside>어사이드</aside>
+        <footer>푸터</footer>
+    </div>
+</body>
+
+</html>

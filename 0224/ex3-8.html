@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Type</title>
+</head>
+<body>
+    <script>
+        
+
+        // number 
+        var num1 = 10;
+        var num2 = 10.2;
+        var num3 = 1e+2; // 변수 이름 수정
+        console.log(num1 + "," + num2 + "," + num3); // 변수 이름 수정
+
+        // string 문자열
+        /* var str1 = 'Hello';
+        var str2 = "World";
+        var str3 = `Hello, World!`;
+        console.log(str1 + "," + str2 + "," + str3); */
+
+        var str1 = '문자';
+        var str2 = "문자는 '문자'";
+        var str3 = `문자는 "문자"`;
+        // \n: 줄바꿈, \t: 탭, \': 작은 따옴표, \": 큰 따옴표, \\: 역슬래시
+        // (escape sequence) 이스케이프 문자
+        var str4 = "you\'re too smart"; // 문자열 내 따옴표 수정
+        console.log(str1 + ',' + str2 + ',' + str3 + ',' + str4);
+
+        //boolean - 참(true)과 거짓(false)을 나타내는 데이터 타입
+        var com1 = (5 > 4);
+        var com2 = (5 < 4);
+        console.log(com1 + ',' + com2);
+
+        // undefined 값이 할당되지 않은 상태
+        var storage;
+        console.log(storage);
+
+        // null 값이 없음을 명시할 때 사용
+        var gnb = document.getElementById('gnb');
+        console.log(gnb);
+
+        // typeof 연산자
+        var type1 = 10;
+        var type2 = '문자';
+        var type3 = ture;
+        console.log(typeof type1 + ',' + typeof type2 + ',' + typeof type3);
+    </script>
+</body>
+</html>
