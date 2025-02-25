@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>continue 문</title>
+    <script>
+        var sum = 0;
+        var num = '3의 배수 ';
+        for (var i = 1; i < 10; i++) {
+            if(i % 3 === 0){
+                num += i + ' ';
+                continue;
+                // countinue; 를 만나면 밑에 명령을 수행하지 않고 for문으로 복귀
+            }
+            sum += i;
+        }
+        document.write(num + '제외 총합 : ' + sum);
+        document.write(`${num} 제외 총합 : ${sum}`);
+        // 3의 배수인 3, 6, 9는 num에 저장되고, 
+        // sum에는 3의 배수를 제외한 1, 2, 4, 5, 7, 8의 합이 저장됨
+    </script>
+</head>
+<body>
+</body>
+</html>

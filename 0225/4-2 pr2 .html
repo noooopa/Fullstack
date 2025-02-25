@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> 사칙연산</title>
+    </head>
+    <body>
+        <!-- 사용자 입력에 따라 간단한 계산을 수행하는 프로그램
+        prompt로
+        입력 10 , 5 , '+'
+        15
+        입력 10 , 5 , '*'
+        50-->
+        <script>
+            var num1 = prompt("첫번째 숫자를 입력하세요", "");
+            var num2 = prompt("두번째 숫자를 입력하세요", "");
+            var opreater = prompt("연산자를 입력하세요", "");
+            var result;
+            switch (opreater) {
+                case '+':
+                    result = parseInt(num1) + parseInt(num2);
+                    alert(result);
+                    break;
+                case '-':
+                    result = parseInt(num1) - parseInt(num2);
+                    alert(result);
+                    break;
+                case '*':
+                    result = parseInt(num1) * parseInt(num2);
+                    alert(result);
+                    break;
+                case '/':
+                    result = parseInt(num1) / parseInt(num2);
+                    alert(result);
+                    break;
+                default:
+                    alert("연산자를 잘못 입력하셨습니다.");
+                    break;
+            }
+
+        </script>
+    </body>
+</html>

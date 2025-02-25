@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- promt로 년도를 입력받는다.
+    연도가 4의 배수이면서 100의 배수가 아닐 때
+    또는 300의 배수일때 윤년입니다. 예를들어, 
+    2012년은 4의 배수이면서 100의 배수가 아니라서 윤년
+    1900년은 4의 배수이지만 100의 배수여서 윤년이 아님
+    2000년은 4의 배수이면서 100의 배수이지만 400의 배수이므로 윤년 -->
+    <script>
+        var year = prompt('년도를 입력하세요','');
+        var leapYear = '';
+        if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+            leapYear = '윤년입니다.';
+        } else {
+            leapYear = '윤년이 아닙니다.';
+        }
+        document.write(leapYear);
+    </script>
+</body>
+</html>

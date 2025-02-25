@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+
+</head>
+<body>
+    <script>
+
+        // 산술 연산자
+        let x = 10;
+        let y = 3;
+
+        console.log(x + y); // (덧셈) 13 
+        console.log(x - y); // (뺄셈) 7
+        console.log(x * y); // (곱셈) 30
+        console.log(x / y); // (나눗셈) 3.3333333333333335
+        console.log(x % y); // (나눈후 나머지) 1
+
+
+        // 할당 연산자
+        let a = 5;
+        let b = '5';
+
+        console.log(a == b); // ture 값만 비교, 타입은 비교하지 않음
+        console.log(a === b); // false 값과 타입 모두 비교
+        console.log(a != b); // false 값이 같이 않으면 ture
+        console.log(a !== b); // ture 
+        console.log(a > 3); // 크다
+        console.log(a < 3); // 작다
+        console.log(a >= 10); // 크거나 같다
+        console.log(a <= 10); // 작거나 같다
+
+
+        // 논리 연산자
+        let c = ture;
+        let d = false;
+
+        console.log(c && d); // false 두 조건이 모두 참일때만 참
+        console.log(c || d); // ture 두 조건중 하나만 참이여도 참
+        console.log( !c); // false 반대로 출력
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- let a = 25, b = 12, c = 18;
+    let max = a > b ? ( a > c ? a : c):( b > c ? b : c);
+    위 내용을 if문을 이용해서 구하시오 -->
+    <script>
+        let a = 25, b = 12, c = 18;
+        let max;
+        if(a > b){
+            if(a > c){
+                max = a;
+            }else{
+                max = c;
+            }
+        }else{
+            if(b > c){
+                max = b;
+            }else{
+                max = c;
+            }
+        }
+        document.write(max);
+    </script>
+</body>
+</html>
