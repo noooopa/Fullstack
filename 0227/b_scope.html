@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 함수레벨 스코프
+        var a = 10;
+        function test(){
+            var x = 10;
+            console.log(x);
+            if(true){
+                let y = 20;
+                console.log(y); // let은 블록레벨 스코프로 if문 안에서만 사용가능
+            }
+            console.log(y);
+        }
+        test();
+    </script>
+</body>
+</html>

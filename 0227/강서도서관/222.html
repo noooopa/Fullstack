@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            height: 300px;
+            width: 660px;
+            background-color: #e0ffa4;
+        }
+        .box #menutab1{
+            padding-left: 0 10px;
+            margin-left: 30px;
+        }
+        .box1{
+
+        }
+        .box2{
+            float: left;
+            position: absolute;
+        }
+        .box2 .img{
+            height: 40px;
+            width: 88.5px;
+        }
+        .box2 .txt{
+            height: 40px;
+            width: 490px;
+        }
+        .box2 .date{
+            height: 40px;
+            width: 81.5px;
+        }
+        .box3{
+
+        }
+        .tab-container {
+            display: flex;
+        }
+
+        .tab {
+            cursor: pointer;
+            padding: 10px;
+            margin-right: 5px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active-content {
+            display: block;
+        }
+
+        .tab.active-tab {
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">
+            <div class="tab-container">
+                <div id="menutab1" class="tab active-tab" onclick="changeTab('tab1')">공지사항</div>
+                <div id="menutab2" class="tab" onclick="changeTab('tab2')">독서·문화·행사</div>
+            </div>
+        </div>
+
+        <div class="box2">
+            <div id="tab1" class="tab-content active-content">
+                <p class="img"><img src="images/tab1.JPG" alt=""></p>
+                <p class="txt">[푸른들] 3월 따로 또 같이</tr></p>
+                <p class="date">2025.02.27</p>
+
+                <p class="img"><img src="images/tab1.JPG" alt=""></p>
+                <p class="txt">[길꽃][서울문화의 밤]도서관의 밤 우리가족 책놀이</tr></p>
+                <p class="date">2025.02.27</p>
+
+                <p class="img"><img src="images/tab1.JPG" alt=""></p>
+                <p class="txt">[푸른들] 2025년 2분기 정규 프로그램 참여자 모집 안내</tr></p>
+                <p class="date">2025.02.27</p>
+
+                <p class="img"><img src="images/tab1.JPG" alt=""></p>
+                <p class="txt">[가양]2025 2분기 정규프로그램 모집안내</tr></p>
+                <p class="date">2025.02.26</p>
+
+                <p class="img"><img src="images/tab1.JPG" alt=""></p>
+                <p class="txt">[곰달래]개관 12주년 기념행사 안내</tr></p>
+                <p class="date">2025.02.26</p>
+            </div>
+        </div>
+        
+        <div class="box3">
+            <div id="tab2" class="tab-content">
+                <p>[길꽃] [서울문화의 밤] 도서관의 밤 우리가족 책놀이</tr></p>
+                <p>TRPG로 고전 읽기 -80일간의 세계일주-</tr></p>
+                <p>[2025년 2분기 정규문화] 세계 역사 속 그 날</tr></p>
+                <p>[2025년 2분기 정규문화] 문해력UP 사고력 UP 읽기의 깊이, 생각의 높이</tr></p>
+                <p>[2025년 2분기 정규문화] 독서랑 논술이랑</tr></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    function changeTab(tabId) {
+        const allTabs = document.querySelectorAll('.tab');
+        const allContent = document.querySelectorAll('.tab-content');
+
+        allTabs.forEach(function(tab) {
+            tab.classList.remove('active-tab');
+        });
+
+        allContent.forEach(function(content) {
+            content.classList.remove('active-content');
+            // 
+        });
+
+        const selectedTab = document.getElementById('menu' + tabId);
+        selectedTab.classList.add('active-tab');
+        
+        
+        const selectedContent = document.getElementById(tabId);
+        selectedContent.classList.add('active-content');
+    }
+</script>

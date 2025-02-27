@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>즉시 실행 함수</title>
+    <script>
+        (function() {
+            iife();           
+        })();
+        
+        function iife() {
+            document.write('즉시 실행 함수1');
+        }
+
+        var instant = (function() {
+            document.write('즉시 실행 함수2');
+        })();        
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 200px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        var x = '10';
+        var y = '20';
+        console.log(x + y); // 1020
+        // 문자열을 더하는 것이기 때문에 1020이 출력됨
+
+        var a = Number(x);
+        var b = Number(y);
+        var c = parseInt(x);
+        var d = parseInt(y);
+        console.log(a + b); // 30
+        console.log(c + d); // 30
+        // Number()는 문자열을 숫자로 변환해주는 함수
+
+        var k = document.getElementById('box').offsetTop;
+        console.log(k); // 200
+        // offsetTop은 상위요소와의 거리를 반환해줌
+
+        var j = parseInt(window.getComputedStyle(document.getElementById('box')).top, 10);
+        console.log(j); // 200
+        // getComputedStyle()는 요소의 모든 CSS 속성을 반환해줌
+    </script>
+</body>
+</html>

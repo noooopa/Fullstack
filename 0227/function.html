@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        function add(a, b) {
+            return a + b;
+        }
+
+        function subtract(a, b) {
+            return a - b;
+        }
+
+        function multiply(a, b) {
+            return a * b;
+        }
+
+        function divide(a, b) {
+            if(b === 0){
+                return "0으로 나눌수 없어요.";
+            }
+            // 자바에선 0으로 나눌수 없어서 오류가 날 수 있으므로 변수를 설정해줌
+            return a / b;
+        }
+
+        console.log(add(5, 3)); // 덧셈 결과 출력
+        console.log(subtract(5, 3)); // 뺄셈 결과 출력
+        console.log(multiply(5, 3)); // 곱셈 결과 출력
+        console.log(divide(6, 3)); // 나눗셈 결과 출력
+    </script>
+</body>
+</html>
