@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/functiom.css">
+</head>
+<body>
+    <ul>
+        <li><a href="#" onclick="return changeBg('green')">green</a></li>
+        <li><a href="#" onclick="return changeBg('orange')">orange</a></li>
+        <li><a href="#" onclick="return changeBg('purple')">purple</a></li>
+    </ul>
+    <div id="result"></div>
+    <script>
+        // green, orange, purple을 전달할 매개변수 color를 선언
+        function changeBg(color){
+            const list = document.querySelectorAll('li');
+            // li는 여러개 있으므로 querySelectorAll로 모두 선택
+
+            list.forEach(item => item.classList.remove('on'));
+            // li의 각각의 요소에 on클래스를 제거한다.
+
+            event.target.parentElement.classList.add('on');
+            // 3개의 a태그 중 클릭한 a태그의 부모인 li에 on클래스를 추가한다.
+
+
+            // var result = document.getElementById('result');
+            var result = document.querySelector('#result');
+            result.style.backgroundColor = color;
+            // 자바스크립트 코드를 작성할땐 카멜태그로 사용하는게 좋다.
+            return false; // a태그의 기본 링크기능을 막아준다.
+        }
+    </script>
+</body>
+</html>
