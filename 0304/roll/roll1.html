@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롤링 슬라이드 배너</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+            float: left;
+            width: 80px;
+        }
+        h1 {
+            text-align: center;
+        }
+        #banner_wrap {
+            width: 260px;
+            padding: 10px 20px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+        }
+        #banner {
+            width: 800px;
+            border: 1px solid red;
+            height: 54px;
+            display: flex;
+        }
+        #flame {
+            width: 232px;
+            height: 54px;
+            position: relative;
+            margin: 10px auto;
+            border: 1px solid blue;
+            /* overflow: hidden; */
+        }
+        p {
+            text-align: center;
+            margin-top: 10px;
+        }
+        p a {
+            display: inline-block;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>롤링 슬라이드 배너 만들기</h1>
+    <div id="banner_wrap">
+        <div id="flame">
+            <ul id="banner">
+                <li><a href="#"><img src="images/pic_t1.jpg" alt="사진1"></a></li>
+                <li><a href="#"><img src="images/pic_t2.jpg" alt="사진2"></a></li>
+                <li><a href="#"><img src="images/pic_t3.jpg" alt="사진3"></a></li>
+                <li><a href="#"><img src="images/pic_t4.jpg" alt="사진4"></a></li>
+                <li><a href="#"><img src="images/pic_t5.jpg" alt="사진5"></a></li>
+                <!-- <li><a href="#"><img src="images/pic_t1.jpg" alt="사진1"></a></li>
+                <li><a href="#"><img src="images/pic_t2.jpg" alt="사진2"></a></li>
+                <li><a href="#"><img src="images/pic_t3.jpg" alt="사진3"></a></li> -->
+            </ul>
+        </div>
+        <p>
+            <a href="#" class="prev">
+                <img src="images/prev_btn.png" alt="이전">
+            </a>
+            <a href="#" class="next">
+                <img src="images/next_btn.png" alt="다음">
+            </a>
+        </p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var list = document.getElementById('banner'); // 배너 리스트
+            var listLi = document.querySelectorAll('#banner li'); // 각 배너 아이템
+            var total = listLi.length; // 전체 배너 개수
+            var li_width = 80; // 개별 아이템 넓이
+            var num = 0; // 현재 이미지 인덱스
+
+            // 👉 자동 슬라이드 제거 (기존 setInterval 없음)
+
+            document.querySelector('.next').addEventListener('click', function(e){
+                e.preventDefault();
+
+                num++;
+                list.style.transition = 'margin-left 0.5s';
+                list.style.marginLeft = -li_width * num + 'px';
+
+                if(num === total - 4) { // 마지막 이미지에 도달했을 때 (복사된 이미지)
+                    setTimeout(function(){
+                        list.style.transition = 'none'; // 트랜지션 효과 없애기
+                        list.style.marginLeft = '0px'; // 처음으로 이동
+                        num = 0;
+                    }, 500);
+                }
+            });
+
+            for (var i = 0; i < 3; i++){
+                var copyobj = listLi[i].cloneNode(true); // li [0] ~ li [2] 순회하며 복사
+                list.append(copyobj); // 복사한 li를 ul 맨 밑에 추가
+                // appendChild와 append의 차이점: append는 여러 개의 요소를 추가할 수 있음
+                // appendChild는 하나의 요소만 추가 가능
+            }
+            // li [0] ~ li [2] 복사 후 li [0] ~ li [4]까지 총 5개의 li가 됨
+
+            document.querySelector('.prev').addEventListener('click', function(e){
+                e.preventDefault();
+
+                if(num === 0) { // 첫 번째 이미지에서 마지막으로 이동
+                    num = total - 5;
+                    list.style.transition = 'none';
+                    list.style.marginLeft = -li_width * num + 'px';
+                }
+
+                setTimeout(function(){
+                    num--;
+                    list.style.transition = 'margin-left 0.5s';
+                    list.style.marginLeft = -li_width * num + 'px';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>

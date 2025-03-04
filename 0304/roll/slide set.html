@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무한 롤링 슬라이드</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        header {
+            width: 1200px;
+            height: 200px;
+            margin: 0 auto;
+            background-color: #222;
+        }
+        #img_slide {
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden; /* 슬라이드 영역 초과 숨김 */
+        }
+        #banner {
+            width: 5000px; /* 넉넉하게 설정 */
+            height: 300px;
+            display: flex;
+            transition: margin-left 0.5s;
+        }
+        #banner li {
+            width: 1200px;
+            height: 300px;
+        }
+        #img_slide p a {
+            position: absolute;
+            width: 38px;
+            height: 36px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        #img_slide p a.prev {
+            left: 20px;
+        }
+        #img_slide p a.next {
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <div id="img_slide">
+        <ul id="banner">
+            <li><a href="#"><img src="images/slide1.jpg" alt="슬라이드 1"></a></li>
+            <li><a href="#"><img src="images/slide2.jpg" alt="슬라이드 2"></a></li>
+            <li><a href="#"><img src="images/slide3.jpg" alt="슬라이드 3"></a></li>
+        </ul>
+        <p>
+            <a href="#" class="prev">
+                <img src="images/prev_btn.png" alt="이전">
+            </a>
+            <a href="#" class="next">
+                <img src="images/next_btn.png" alt="다음">
+            </a>
+        </p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let list = document.querySelector('#banner');
+            let listLi = document.querySelectorAll('#banner li');
+            let total = listLi.length;
+            let li_width = 1200; // 이미지 가로 크기
+            let num = 0; // 현재 인덱스
+            let interval; // 자동 재생 타이머
+
+            // 마지막 이미지를 복사해서 맨 앞으로 추가
+            let firstClone = listLi[0].cloneNode(true);
+            list.appendChild(firstClone);
+
+            let newListLi = document.querySelectorAll('#banner li');
+            let newTotal = newListLi.length; // 복사된 후 총 개수
+
+            function moveSlide(index) {
+                list.style.transition = 'margin-left 0.5s';
+                list.style.marginLeft = -li_width * index + 'px';
+            }
+
+            function nextSlide() {
+                num++;
+                moveSlide(num);
+
+                if (num === total) { // 마지막 슬라이드에서 처음으로 이동
+                    setTimeout(() => {
+                        list.style.transition = 'none';
+                        list.style.marginLeft = '0px';
+                        num = 0;
+                    }, 500);
+                }
+            }
+
+            function prevSlide() {
+                if (num === 0) { // 첫 번째에서 마지막으로 이동
+                    num = total;
+                    list.style.transition = 'none';
+                    list.style.marginLeft = -li_width * num + 'px';
+                }
+
+                setTimeout(() => {
+                    num--;
+                    moveSlide(num);
+                }, 100);
+            }
+
+            document.querySelector('.next').addEventListener('click', function(e) {
+                e.preventDefault();
+                nextSlide();
+                resetAutoPlay();
+            });
+
+            document.querySelector('.prev').addEventListener('click', function(e) {
+                e.preventDefault();
+                prevSlide();
+                resetAutoPlay();
+            });
+
+            function startAutoPlay() {
+                interval = setInterval(nextSlide, 3000);
+            }
+
+            function resetAutoPlay() {
+                clearInterval(interval);
+                startAutoPlay();
+            }
+
+            startAutoPlay(); // 자동 슬라이드 시작
+        });
+    </script>
+</body>
+</html>
