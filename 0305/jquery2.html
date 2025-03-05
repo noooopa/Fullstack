@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 선택자 예제</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function(){
+            $('#list1 li:odd').css('background', 'yellow'); // 홀수 인덱스 배경 노랑
+            $('#list1 li:even').css('background', 'grey');  // 짝수 인덱스 배경 회색
+
+            $('#list1 li:first').css('color', 'red');  // 첫 번째 리스트 아이템 글자색 빨강
+            $('#list1 li:last').css('color', 'red');   // 마지막 리스트 아이템 글자색 빨강
+
+            $('#list1 li').eq(1).css('font-style', 'italic'); // 인덱스 1번 리스트 아이템 이탤릭체
+
+            $('#list1 li:lt(2)').css('border', 'dotted 2px aqua'); // 인덱스 0,1 아이템 테두리 점선 하늘색
+            $('#list1 li:gt(2)').css('border', 'dotted 2px purple'); // 인덱스 3번 이상 테두리 점선 보라색
+
+            $('#list2 li:nth-child(2n)').css('background', 'orange'); // 짝수 번째 리스트 아이템 배경 주황
+
+            $("#list2 li:contains('리스트11')").css('color', 'red'); // '리스트11' 포함한 리스트 아이템 글자색 빨강
+            $("#list2 li:has(span)").css('color', 'aqua'); // <span> 태그 포함한 리스트 아이템 글자색 청록색
+
+            $("#list2 li").filter(".theObj").css('font-size', '20px'); // class="theObj" 요소만 글자 크기 20px
+            $("#list2 li").find("a").css("background-color", "red"); // 리스트 내부의 <a> 태그 배경색 빨강
+
+            $("#list3").prepend("<li>list_1</li>"); // 리스트 처음에 추가
+            $("#list3").append("<li>list_6</li>");  // 리스트 마지막에 추가
+
+            $("<li>insertBefore</li>").insertBefore($('#list3 li').eq(4));
+
+            $("<li>insertAfter</li>").insertAfter($('#list3 li').eq(5));
+
+            var k = $('#list3 li').eq(0).attr('class');
+            // alert(k);
+            $("#list3 li").eq(0).attr('class', "obj2");
+            $(".obj2").css("background-color", "yellow");
+
+            $("#list3 li").eq(5).addClass('obj3');
+            $(".obj3").css("color", 'red')
+
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>탐색 선택자 및 HTML 조작</h1>
+        <h2>탐색 선택자</h2>
+        <ul id="list1">
+            <li>리스트1</li>
+            <li>리스트2</li>
+            <li>리스트3</li>
+            <li>리스트4</li>
+            <li>리스트5</li>
+            <li>리스트6</li>
+            <li>리스트7</li>
+        </ul>
+        <ul id="list2">
+            <li>리스트8</li>
+            <li class="theObj">리스트9</li>
+            <li><span>리스트10</span></li>
+            <li>리스트11</li>
+            <li><a href="#">리스트12</a></li>
+            <li>리스트13</li>
+            <li>리스트14</li>
+        </ul>
+
+        <h2 class="theTitle">HTML 조작</h2>
+        <ul id="list3">
+            <li class="obj1">list_2</li>
+            <li>list_3</li>
+            <li>list_4</li>
+            <li>list_5</li>
+        </ul>
+    </div>
+</body>
+</html>

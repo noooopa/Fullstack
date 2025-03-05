@@ -4,17 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    <div id="myDiv">Hello, World!</div>
-    <div class="myClass">First Div</div>
-    <div class="myClass">Second Div</div>
-    <p>Paragraph 1</p>
-    <p>Paragraph 2</p>
+    <script>
+    // html, css를 읽고나서 실행
+    // window.onload = function(){내용}
 
-</body>
-</html>
-<script>
+    document.addEventListener('DOMContentLoaded', function(){ 
+
     // const ellement = document.getElementById('myDiv');
     const element = document.querySelector('#myDiv'); 
     console.log(element.textContent); // Hello, World! 출력
@@ -31,5 +26,15 @@
     console.log(Paragraph.length); // 2 출력
     console.log(Paragraph[0].textContent); // Paragraph 1 출력
     console.log(Paragraph[1].textContent); // Paragraph 2 출력
-
+    });
 </script>
+</head>
+<body>
+    <div id="myDiv">Hello, World!</div>
+    <div class="myClass">First Div</div>
+    <div class="myClass">Second Div</div>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+
+</body>
+</html>
