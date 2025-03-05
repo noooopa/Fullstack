@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas 5x5 Grid</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        const rows = 5; // 행 개수
+        const cols = 5; // 열 개수
+        const cellSize = 100; // 한 칸 크기 (500px / 5)
+
+        // 표 그리기
+        function drawGrid() {
+            ctx.strokeStyle = "black"; // 테두리 색상
+            ctx.lineWidth = 2;
+
+            for (let i = 0; i <= rows; i++) {
+                // 가로선 그리기
+                ctx.beginPath();
+                ctx.moveTo(0, i * cellSize);
+                ctx.lineTo(canvas.width, i * cellSize);
+                ctx.stroke();
+            }
+
+            for (let j = 0; j <= cols; j++) {
+                // 세로선 그리기
+                ctx.beginPath();
+                ctx.moveTo(j * cellSize, 0);
+                ctx.lineTo(j * cellSize, canvas.height);
+                ctx.stroke();
+            }
+        }
+
+        // 숫자 배치하기
+        function drawNumbers() {
+            ctx.font = "30px Arial"; // 글꼴 설정
+            ctx.fillStyle = "black"; // 글자 색상
+            ctx.textAlign = "center"; // 가운데 정렬
+            ctx.textBaseline = "middle"; // 중앙 기준
+
+            let number = 1;
+            for (let row = 0; row < rows; row++) {
+                for (let col = 0; col < cols; col++) {
+                    let x = col * cellSize + cellSize / 2; // 가운데 정렬
+                    let y = row * cellSize + cellSize / 2;
+                    ctx.fillText(number, x, y);
+                    number++;
+                }
+            }
+        }
+
+        // 실행
+        drawGrid();
+        drawNumbers();
+    </script>
+</body>
+</html>

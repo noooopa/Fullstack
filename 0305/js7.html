@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let id = prompt("아이디","");
+        let myPassword = "123456789q"
+        let myId = "easy1004";
+        let password = prompt("비밀번호","");
+        
+        if(id == myId){
+            if(myPassword == password){
+                document.write("well come " + id)
+            } else {
+                alert("비밀번호 일치안함")
+                location.reload();
+            }
+        } else {
+            alert("아이디 일치안함")
+            location.reload();
+            //새로고침
+        }
+    </script>
+</body>
+</html>

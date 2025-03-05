@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let site = prompt("네이버, 다음, 네이트, 구글 중 즐찾 사이트","");
+        let url;
+        switch (site) {
+            case "구글":
+                url = "www.google.com";
+                break;
+            case "네이버":
+                url = "www.naver.com";
+                break;
+            case "다음":
+                url = "www.daum.net";
+                break;
+            case "네이트":
+                url = "www.nate.com";
+                break;
+        
+            default:
+                alert("오입력");
+                break;
+        }
+        if(url){
+            location.href = "http://"+url
+            //사이트로 이동
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = true;
+        let b = false;
+        let c = 10 > 5;
+        let d = Boolean(null);
+        //데이터 미입력시 false 있다면 true
+
+        document.write(a,"<br>")
+        document.write(b,"<br>")
+        document.write(c,"<br>")
+        document.write(d,"<br>")
+
+        let num = 100;
+        let str = "자바스크립트";
+        let $num = 10;
+        //변수 앞 글자는 $,_는 되지만 숫자는 안된다
+        let s;
+        //값 지정 안하고 부를시 undefined로 나옴
+
+        document.write(typeof num,"<br>")
+        document.write(typeof str,"<br>")
+
+        let t1 = "123"
+        let t2 = "123"
+        let result = t1+t2;
+        document.write(result,"<br>")
+        //문자만이나 숫자나 문자는 붙어서 출력
+
+        let str1 = "<table border='1'>"
+            str1 += "<tr>"
+            str1 += "<td>1</td><td>2</td><td>3</td>"
+            str1 += "</tr>"
+            str1 += "</table>"
+            console.log(str1)
+        document.write(str1);
+    </script>
+</body>
+</html>

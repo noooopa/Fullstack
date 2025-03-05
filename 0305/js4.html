@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let weight = parseInt(prompt("무게",""));
+        let height = parseInt(prompt("신장",""));
+        let result = (height-100)*0.9;
+        console.log(result)
+
+        // if(result <= weight){
+        //     document.write("적정체중을 초과했습니다.")
+        // } else {
+        //     document.write("정상")
+        // }
+        weight <= result ? document.write("정상") : document.write("적정체중을 초과했습니다.");
+    </script>
+</body>
+</html>
